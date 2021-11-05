@@ -7,6 +7,7 @@ import org.opencv.core.Core;
 import static org.opencv.core.Core.mean;
 import static org.opencv.core.Core.minMaxLoc;
 import static org.opencv.core.Core.split;
+import org.opencv.core.CvException;
 import org.opencv.core.Mat;
 import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
@@ -36,7 +37,7 @@ public class EstadisticasImagen {
     }
 
     public void calculaEstadisticas(Mat imagenColor, Point esqSupIzda,
-            Dimension dimVista) {
+            Dimension dimVista){
 
         // crea la subimagen correspondiente al viewport
         Mat subimagen = new Mat(imagenColor, new Rect(esqSupIzda.x, esqSupIzda.y,
